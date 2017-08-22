@@ -321,6 +321,9 @@ public class IntentShim extends CordovaPlugin {
             } else if (key.equals(Intent.EXTRA_EMAIL)) {
                 // allows to add the email address of the receiver
                 i.putExtra(Intent.EXTRA_EMAIL, new String[] { value });
+            } else if (key.equals(Intent.EXTRA_ALLOW_MULTIPLE)) {
+                // allows to add the email address of the receiver
+                i.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
             } else {
                 i.putExtra(key, value);
             }
